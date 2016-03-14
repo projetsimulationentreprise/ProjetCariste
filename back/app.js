@@ -84,4 +84,18 @@ app.post('/signup/ok', function(req,res){
 //    });
 //});
 
+var Sequelize = require('sequelize')
+    , sequelize = new Sequelize('projet', 'goldenrice', 'projetsimulationentreprise', {
+      dialect: "mysql", // or 'sqlite', 'postgres', 'mariadb'
+      port:    7494, // or 5432 (for postgres)
+    });
+
+sequelize
+    .sync()
+    .then(function(err) {
+      console.log('Connection has been established successfully.');
+    }, function (err) {
+      console.log('Unable to connect to the database:', err);
+    });
+
 module.exports = app;
