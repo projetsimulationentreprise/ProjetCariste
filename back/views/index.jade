@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form(action='/',method='post')
+        label(for='email') email
+          input(id='email',type='text',value='',placeholder='@',name='email')
+        label(for='password') password
+          input(id='password',type='password',value='',placeholder='',name='password')
+        input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')

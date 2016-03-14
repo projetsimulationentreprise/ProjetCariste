@@ -1,0 +1,11 @@
+//
+   Created by Janany on 11/03/2016.
+extends layout
+
+block content
+    form(action='/signup',method='post')
+        label(for='email') email
+            input(id='email',type='text',value='',placeholder='@',name='email')
+        label(for='password') password
+            input(id='password',type='password',value='',placeholder='',name='password')
+        input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
