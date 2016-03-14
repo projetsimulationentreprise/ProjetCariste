@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/index.js" rel="stylesheet">
+  </head>
+    <body>
+        <!-- entête -->
+        <div class="site-branding-area">
+            <div class="container">
+                <div class="row">
+                    <!--positionnement Logo -->
+                    <div class="col-xs-11">
+                        <div class="logo">
+                            <h1><a href="index.html"><span>eRecrue</span></a></h1>
+                        </div>
+                    </div>
+                    <!--positionnement Bouton Log -->
+                    </br></br></br>
+                    <div class="col-xs-1">
+                        <button class="btn btn-info btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Se connecter</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </br></br></br>
+        <!-- Fin entête -->
+
+  
+        <!-- Login -->
+        <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <br>
+                <div class="bs-example bs-example-tabs">
+                    <ul id="myTab" class="nav nav-tabs">
+                      <li class="active"><a href="#signin" data-toggle="tab">Se connecter</a></li>
+                      <li class=""><a href="#signup" data-toggle="tab">S'enregister</a></li>
+                    </ul>
+                </div>
+              <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="signin">
+                        <form class="form-horizontal">
+                        <fieldset>
+                        <!--     Se connecter   -->
+                        <!-- PSEUDO-->
+                        <div class="control-group">
+                          <label class="control-label" for="userid">Nom:</label>
+                          <div class="controls">
+                            <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="Nom" class="input-medium" required="">
+                          </div>
+                        </div>
+
+                        <!-- MOT DE PASSE-->
+                        <div class="control-group">
+                          <label class="control-label" for="passwordinput">Mote de passe:</label>
+                          <div class="controls">
+                            <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                          </div>
+                        </div>
+
+                        <!-- Case à cocher -->
+                        <div class="control-group">
+                          <label class="control-label" for="rememberme"></label>
+                          <div class="controls">
+                            <label class="checkbox inline" for="rememberme-0">
+                              <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                              Se rappeler
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- Button popup -->
+                        <div class="control-group">
+                          <label class="control-label" for="signin"></label>
+                          <div class="controls">
+                            <button id="signin" name="signin" class="btn btn-success">Se connecter</button>
+                          </div>
+                        </div>
+                        </fieldset>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="signup">
+                        <form class="form-horizontal">
+                        <fieldset>
+                        <!-- S'enregistrer-->
+                        <!-- EMAIL-->
+                        <div class="control-group">
+                          <label class="control-label" for="Email">Email:</label>
+                          <div class="controls">
+                            <input id="Email" name="Email" class="form-control" type="text" placeholder="@mail.com" class="input-large" required="">
+                          </div>
+                        </div>
+                        
+                        <!-- PSEUDO-->
+                        <div class="control-group">
+                          <label class="control-label" for="userid">NOM:</label>
+                          <div class="controls">
+                            <input id="userid" name="userid" class="form-control" type="text" placeholder="Nom" class="input-large" required="">
+                          </div>
+                        </div>
+                        
+                        <!-- Mot DE PASSE-->
+                        <div class="control-group">
+                          <label class="control-label" for="password">Mot de passe:</label>
+                          <div class="controls">
+                            <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                            <em>1-8 Characters</em>
+                          </div>
+                        </div>
+                        
+                        <!-- RE MOT DE PASSE-->
+                        <div class="control-group">
+                          <label class="control-label" for="reenterpassword">Re taper mot de passe:</label>
+                          <div class="controls">
+                            <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                          </div>
+                        </div>
+                        
+                        <!-- Pour Captcha -->
+                        
+                        
+                        <!-- Button -->
+                        <div class="control-group">
+                          <label class="control-label" for="confirmsignup"></label>
+                          <div class="controls">
+                            <button id="confirmsignup" name="confirmsignup" class="btn btn-success">S'enregistrer</button>
+                          </div>
+                        </div>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                    <center>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    </center>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Login --> 
+
+
+     <!-- NavBar --> 
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="index.html"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="espace.html">Mon espace</a></li>
+                    <li><a href="contact.html">Nous contacer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin NavBar --> 
+
+<!-- Formulaire-->
+<div class="container">
+  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <fieldset>
+
+      <legend>Nous contacter!</legend>
+
+      <!-- Nom-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Nom</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input  name="first_name" placeholder="Nom" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Prenom-->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" >Prénom</label> 
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input name="last_name" placeholder="Prénom" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mail-->
+             <div class="form-group">
+        <label class="col-md-4 control-label">E-Mail</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input name="email" placeholder="E-Mail Adresse" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Telephone-->
+             
+      <div class="form-group">
+        <label class="col-md-4 control-label">Téléphone #</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+        <input name="phone" placeholder="(+33)" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+            
+      <div class="form-group">
+        <label class="col-md-4 control-label">Adresse</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+        <input name="address" placeholder="Adresse" class="form-control" type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Text input-->
+       
+      <div class="form-group">
+        <label class="col-md-4 control-label">Ville</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+        <input name="city" placeholder="Ville" class="form-control"  type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+         
+      <div class="form-group"> 
+        <label class="col-md-4 control-label">Sujet</label>
+          <div class="col-md-4 selectContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+          <select name="state" class="form-control selectpicker" >
+            <option value=" " >Choisir un sujet </option>
+            <option>Probleme de connexion</option>
+            <option >Autres</option>
+          </select>
+        </div>
+      </div>
+      </div>
+
+      <!-- Code postal -->
+
+      <div class="form-group">
+        <label class="col-md-4 control-label">Code postal</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+        <input name="zip" placeholder="Code postale" class="form-control"  type="text">
+          </div>
+      </div>
+      </div>
+
+      <!-- Text area -->
+        
+      <div class="form-group">
+        <label class="col-md-4 control-label">Description</label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                <textarea class="form-control" name="comment" placeholder="Description"></textarea>
+        </div>
+        </div>
+      </div>
+
+      <!-- Success message -->
+      <div class="alert alert-success" role="alert" id="success_message">Envoyer <i class="glyphicon glyphicon-thumbs-up"></i>Merci.</div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning" >Envoyer <span class="glyphicon glyphicon-send"></span></button>
+        </div>
+      </div>
+      </br></br></br>
+
+      </fieldset>
+      </form>
+      </div>
+    </div>
+ 
+
+
+    <!-- Pied de -->
+    <div id="footer">
+      <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+        <div class ="contener-fluid">
+          <div class="row" id="bottomNav">
+            <div class="col-xs-4 text-center">
+              <ul>
+                <li><a href="" title="Publier une annonce" name="flpjob">Publier des annonces</a></li>
+                <li><a href="" title="Rechercher des CV" name="flschRes">Rechercher des CV</a></li>
+                <li><a href="" title="Communiquer" name="fladvu">Communiquer</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-4 text-center">
+              <ul>
+                <li><a href="" title="Publier une annonce" name="flpjob">Publier des annonces</a></li>
+                <li><a href="" title="Rechercher des CV" name="flschRes">Rechercher des CV</a></li>
+                <li><a href="" title="Communiquer" name="fladvu">Communiquer</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-4 text-center">
+              <ul>
+                <li><a href="" title="Publier une annonce" name="flpjob">Publier des annonces</a></li>
+                <li><a href="" title="Rechercher des CV" name="flschRes">Rechercher des CV</a></li>
+                <li><a href="" title="Communiquer" name="fladvu">Communiquer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
