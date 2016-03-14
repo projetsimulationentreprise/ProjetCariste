@@ -8,14 +8,23 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var Users   = require('./models/users');
+var Users = require('./models/users');
 
 var app = express();
+
+global.config = require(path.join(__dirname, "package.json")).config;
+
+var server = app.listen(7494, function () {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+app.set('port', process.env.PORT || 7494);
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -62,9 +71,9 @@ app.use(function(err, req, res, next) {
 });
 
 app.post('/signup/ok', function(req,res){
-    var email = req.body.email;
-    var pass = req.body.password;
-    res.send(email + " : " + pass );
+  var mail = req.body.mail;
+  var pass = req.body.password;
+  res.send(mail + " : " + pass );
 });
 
 //app.get('/setup', function(req, res) {
@@ -85,10 +94,25 @@ app.post('/signup/ok', function(req,res){
 //});
 
 var Sequelize = require('sequelize')
-    , sequelize = new Sequelize('projet', 'goldenrice', 'projetsimulationentreprise', {
+    , sequelize = new Sequelize('database', 'root', 'root', {
       dialect: "mysql", // or 'sqlite', 'postgres', 'mariadb'
-      port:    7494, // or 5432 (for postgres)
+      port:    7494 // or 5432 (for postgres)
     });
+
+var Users = sequelize.define('Users', {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  nom: Sequelize.STRING,
+  mail: Sequelize.STRING,
+  password: Sequelize.STRING,
+  localisation: Sequelize.STRING,
+  skill: Sequelize.STRING,
+  move: Sequelize.STRING
+});
+
 
 sequelize
     .sync()
@@ -96,6 +120,18 @@ sequelize
       console.log('Connection has been established successfully.');
     }, function (err) {
       console.log('Unable to connect to the database:', err);
+    }, function () {
+      return Users.create({
+        id: '',
+        nom: '',
+        mail: '',
+        password: '',
+        localisation: '',
+        skill: '',
+        move: ''
+
+      });
     });
+
 
 module.exports = app;
