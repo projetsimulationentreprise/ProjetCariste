@@ -138,7 +138,7 @@ body {
     -moz-border-radius: 50%;
     height: 60px;
     width: 60px;
-    background-color: #4A1A2C;
+    background-color: #5882FA;
     color: #fff;
 }
 
@@ -157,7 +157,7 @@ body {
 
     .user-settings-wrapper .nav > li > a:hover,.user-settings-wrapper .nav > li > a:focus {
         text-decoration: none;
-        background-color: #4A1A2C!important;
+        background-color: #5882FA!important;
     }
 
     .user-settings-wrapper img {
@@ -198,24 +198,24 @@ body {
 }
 
 .menu-top-active {
-    background-color: #4A1A2C;
+    background-color: #5882FA;
 }
 
 .menu-section .nav > li > a:hover,.menu-section .nav > li > a:focus {
-    background-color: #4A1A2C!important;
+    background-color: #5882FA!important;
 }
 
 .menu-section .dropdown-menu > li > a:hover,.menu-section .dropdown-menu > li > a:focus {
-    background-color: #4A1A2C!important;
+    background-color: #5882FA!important;
 }
 
 .navbar-inverse {
-    background-color: #4A1A2C;
+    background-color: #5882FA;
     border-color: transparent;
 }
 
 .navbar-toggle {
-    background-color: #4A1A2C;
+    background-color: #5882FA;
     border: 1px solid #fff;
 }
 
