@@ -29,3 +29,19 @@ $('.pope').click(function () {
         b=1;
     }
 });
+
+var c;
+c=1;
+
+$('.cachere').fadeOut(0);
+
+$('.popee').click(function () {
+    if(c==1){
+        $('.cachere').fadeIn(1);
+        c=0;
+    }
+    else{
+        $('.cachere').fadeOut(1);
+        c=1;
+    }
+ });

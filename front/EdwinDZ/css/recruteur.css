@@ -1,3 +1,39 @@
+.Center{
+    text-align: center;
+}
+
+.CenterB{
+    display: block;
+    margin: 0 auto;
+}
+
+.liens{
+    text-align: center;
+    margin-top: 3%
+}
+
+.imageT{
+    margin-top: 3%
+}
+
+.barre{
+    margin-bottom: 3%   
+}
+
+
+
+.lechat{
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#ptiboutton{
+    margin-top: 5%;   
+}
+
+#pied{
+    margin-top: 5%;
+}
 .navbar-wrapper {
     margin-top: 20px;
 }
