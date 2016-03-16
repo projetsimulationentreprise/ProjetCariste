@@ -7,307 +7,300 @@
         <title></title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/index.css" rel="stylesheet">
-
     </head>
     <body>
         <!-- entête -->
-        <body>
-            <div class="navbar-wrapper">
-                <div class="container">
-                    <nav class="navbar navbar-inverse navbar-static-top">
-                        <div class="container">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="#">eRecrute</a>
-                            </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="index.html">Acceuil</a></li>
-                                    <li><a href="espace.html">Mon espace</a></li>
-                                    <li><a href="espace.html">Espace Recruteur</a></li>
-                                    <li><a href="#formul">Nous contacer</a></li>
-                                    <li><a id="log" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Se connecter</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
+        <div class="navbar navbar-inverse set-radius-zero">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+
                 </div>
             </div>
-            <!-- Fin entête -->
+        </div>
+        <section class="menu-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar-collapse collapse ">
+                            <ul id="menu-top" class="nav navbar-nav navbar-right">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a class="menu-top-active" href="espace.html">Mon espace</a></li>
+                                <li><a href="accueilRecruteur.html">Escpace Recruteur</a></li>
+                                <li><a href="#formul">Nous contacter</a></li>
+                                <li><a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Se connecter</a></li>
 
-            <!-- Carousel --> 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img class="first-slide" src="../image/b3.jpg" alt="First slide">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img class="second-slide" src="../image/b2.jpg"alt="Second slide">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img class="third-slide" src="../image/b1.jpg" alt="Third slide">
-                        <div class="container">
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Précedant</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Suivant</span>
-                </a>
-            </div>
-            <!-- Fin Carousel -->
-            <br>
-
-            <!-- Login -->
-            <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <br>
-                        <div class="bs-example bs-example-tabs">
-                            <ul id="myTab" class="nav nav-tabs">
-                                <li class="active"><a href="#signin" data-toggle="tab">Se connecter</a></li>
-                                <li class=""><a href="#signup" data-toggle="tab">S'enregister</a></li>
                             </ul>
                         </div>
-                        <div class="modal-body">
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade active in" id="signin">
-                                    <form class="form-horizontal">
-                                        <fieldset>
-                                            <!--     Se connecter   -->
-                                            <!-- PSEUDO-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="userid">Nom:</label>
-                                                <div class="controls">
-                                                    <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="Nom" class="input-medium" required="">
-                                                </div>
-                                            </div>
+                    </div>
 
-                                            <!-- MOT DE PASSE-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="passwordinput">Mote de passe:</label>
-                                                <div class="controls">
-                                                    <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
-                                                </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin entête -->
+        <!-- Fin entête -->
+        <img id="navnav" class="img-responsive" src="../image/b1.jpg">
+        <!-- Login -->
+        <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <br>
+                    <div class="bs-example bs-example-tabs">
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#signin" data-toggle="tab">Se connecter</a></li>
+                            <li class=""><a href="#signup" data-toggle="tab">S'enregister</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body">
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade active in" id="signin">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <!--     Se connecter   -->
+                                        <!-- PSEUDO-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="userid">Nom:</label>
+                                            <div class="controls">
+                                                <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="Nom" class="input-medium" required="">
                                             </div>
+                                        </div>
 
-                                            <!-- Case à cocher -->
-                                            <div class="control-group">
-                                                <label class="control-label" for="rememberme"></label>
-                                                <div class="controls">
-                                                    <label class="checkbox inline" for="rememberme-0">
-                                                        <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
-                                                        Se rappeler
-                                                    </label>
-                                                </div>
+                                        <!-- MOT DE PASSE-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="passwordinput">Mote de passe:</label>
+                                            <div class="controls">
+                                                <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
                                             </div>
+                                        </div>
 
-                                            <!-- Button popup -->
-                                            <div class="control-group">
-                                                <label class="control-label" for="signin"></label>
-                                                <div class="controls">
-                                                    <button id="signin" name="signin" class="btn btn-success">Se connecter</button>
-                                                </div>
+                                        <!-- Case à cocher -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="rememberme"></label>
+                                            <div class="controls">
+                                                <label class="checkbox inline" for="rememberme-0"></label>
+                                                <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">Se rappeler
                                             </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="signup">
-                                    <form class="form-horizontal">
-                                        <fieldset>
-                                            <!-- S'enregistrer-->
-                                            <!-- EMAIL-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="Email">Email:</label>
-                                                <div class="controls">
-                                                    <input id="Email" name="Email" class="form-control" type="text" placeholder="@mail.com" class="input-large" required="">
-                                                </div>
-                                            </div>
+                                        </div>
 
-                                            <!-- PSEUDO-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="userid">NOM:</label>
-                                                <div class="controls">
-                                                    <input id="userid" name="userid" class="form-control" type="text" placeholder="Nom" class="input-large" required="">
-                                                </div>
+                                        <!-- Button popup -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="signin"></label>
+                                            <div class="controls">
+                                                <button id="signin" name="signin" class="btn btn-success">Se connecter</button>
                                             </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="signup">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <!-- S'enregistrer-->
+                                        <!-- EMAIL-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="Email">Email:</label>
+                                            <div class="controls">
+                                                <input id="Email" name="Email" class="form-control" type="text" placeholder="@mail.com" class="input-large" required="">
+                                            </div>
+                                        </div>
 
-                                            <!-- Mot DE PASSE-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="password">Mot de passe:</label>
-                                                <div class="controls">
-                                                    <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
-                                                    <em>1-8 Characters</em>
-                                                </div>
+                                        <!-- PSEUDO-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="userid">NOM:</label>
+                                            <div class="controls">
+                                                <input id="userid" name="userid" class="form-control" type="text" placeholder="Nom" class="input-large" required="">
                                             </div>
+                                        </div>
 
-                                            <!-- RE MOT DE PASSE-->
-                                            <div class="control-group">
-                                                <label class="control-label" for="reenterpassword">Re taper mot de passe:</label>
-                                                <div class="controls">
-                                                    <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
-                                                </div>
+                                        <!-- Mot DE PASSE-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="password">Mot de passe:</label>
+                                            <div class="controls">
+                                                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                                                <em>1-8 Characters</em>
                                             </div>
+                                        </div>
 
-                                            <!-- Pour Captcha -->
-                                            <!-- Button -->
-                                            <div class="control-group">
-                                                <label class="control-label" for="confirmsignup"></label>
-                                                <div class="controls">
-                                                    <button id="confirmsignup" name="confirmsignup" class="btn btn-success">S'enregistrer</button>
-                                                </div>
+                                        <!-- RE MOT DE PASSE-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="reenterpassword">Re taper mot de passe:</label>
+                                            <div class="controls">
+                                                <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
                                             </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
+                                        </div>
+
+                                        <!-- Pour Captcha -->
+                                        <!-- Button -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="confirmsignup"></label>
+                                            <div class="controls">
+                                                <button id="confirmsignup" name="confirmsignup" class="btn btn-success">S'enregistrer</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <center>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            </center>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        </center>
                     </div>
                 </div>
             </div>
-            <!-- Fin Login --> 
+        </div>
+        <!-- fin head-->
+        <div class="col-md-offset-3 col-md-6">
+            <img class="img-circle img-responsive CenterB lechat" src="http://www.online-image-editor.com//styles/2014/images/example_image.png" alt="">
+        </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-6">
-        <ul class="list-group">
-            <li class="list-group-item"><a href="" title="Nom" name=""><h4>Nom : xxxxxxxxx</h4></a><button>Modifier</button></li>
-            <li class="list-group-item"><a href="" title="Prenom" name=""><h4>Prenom : xxxxxxxxx</h4><button>Modifier</button></a></li>
-            <li class="list-group-item"><a href="" title="eMail" name=""><h4>Adresse mail : xxxx@xxxx</h4><button>Modifier</button></a></li>
-            <li class="list-group-item"><a href="" title="NumTelephone"><h4>Numero telephone : xxxxxxxx</h4><button>Modifier</button></a></li>
-            <li class="list-group-item"><a href="" title="Adresse"><h4>Adresse : xxxxxxxx</h4><button>Modifier</button></a></li>
-            <li class="list-group-item"><a href="" title="motDePasse"><button>Modifier le mot de passe</button></a></li>
-        </ul>
-    </div>
-    <div class="col-xs-6">
-      <ul>
-        <li class="list-group-item">
-          <h4>Descrition</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.</p>
-          <textarea name="" id="" cols="75" rows="8">xxxxxxxxxxxxxx</textarea>
-          </br></br>
-          <button>Modifier</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</br></br>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-        <ul>
-            <li class="list-group-item">
-                <h4>Le CV</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit..</p>
-                <button>Telecharger</button>
-            </li>
-        </ul>
-    </div>
-    <div class="col-sm-offset-2 col-sm-6">
-            <li class="list-group-item">
-              <h4>Resultats aux tests :</h4>
-                <p>Note : 
-                  - </br></br>
-                  - </br></br>
-                  - </br></br>
-                  - </br></br>
-                  - </br></br>
-                </p>
-            </li>
-        </br></br></br></br></br></br></br></br></br></br>
-      </div>
-    </div>
-  </div>
- 
+        <div class="st container">
+            <div class="col-md-6">
+                <br>
+                <ul class="well" class="list-group">
+                    <li class="list-group-item"><h4>Nom : xxxxxxxxx</h4>
+                        <input type="text" class="cache form-control" placeholder="Changer de nom">
+                    </li>
 
+                    <li class="list-group-item"><h4>Prenom : xxxxxxxxx</h4>
+                        <input type="text" class="cache form-control" placeholder="Changer de prenom">
+                    </li>
 
-    <!-- Pied de -->
-            <!-- Pied de -->
-            <div class="col-xs-12 well" id="pied">
-                <div id="formul" class="col-xs-6">
-                    <form action="">
-                        <div class="col-md-6">
-                            <p>Prenom</p>
-                            <input class="form-control" type="text" name="" id=""> 
-                        </div>
-                        <div class="col-md-6">
-                            <p>Adresse mail</p>
-                            <input class="form-control" type="email" name="" id="">
-                        </div>
-                        <div class="col-md-12">
-                            <p>Message</p>
-                            <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
-                        </div>
-                        <button class="btn btn-default">Envoyer</button>
-                    </form>
-                </div>
-                <div class="col-xs-6">
-                    <p> </p>
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
-                        </ul>
+                    <li class="list-group-item"><h4>Adresse mail : xxxx@xxxx</h4>
+                        <input type="email" class="cache form-control" placeholder="Changer d'adresse mail">
+                    </li>
+
+                    <li class="list-group-item"><h4>Numero telephone : xxxxxxxx</h4>
+                        <input type="text" class="cache form-control" placeholder="Changer de numero de telephonel">
+                    </li>
+
+                    <li class="list-group-item"><h4>Adresse : xxxxxxxx</h4>
+                        <input type="text" class="cache form-control" placeholder="Changer d'adresse">
+                    </li>
+
+                    <li class="list-group-item"><button class="btn btn-default pop">Modifier les parametres</button></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <ul class="well">
+                    <li  class="list-group-item">
+                        <h4>Descrition</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit.</p>
+                        <textarea class="cacher" cols="30" rows="10"></textarea>
+                        <button class="btn btn-default pope">Modifier</button>
+                    </li>
+                </ul>               
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-6">
+                <ul class="well">
+                    <li class="list-group-item">
+                        <h4>Le CV</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem possimus quod incidunt quis nisi repellendus quisquam at sunt magni asperiores alias tempore sequi, nemo quas voluptatibus iure temporibus. Commodi, reprehenderit..</p>
+                        <button class="btn btn-default">Telecharger</button>
+                    </li>
+                </ul> 
+            </div>
+            <div class="col-md-6">
+                <ul class="well">
+                    <li class="list-group-item">
+                        <h4>Resultats aux tests :</h4>
+                        <p>Note : 
+                            - <br><br>
+                            - <br><br>
+                            - <br><br>
+                            - <br><br>
+                            - <br><br>
+                        </p>
+                    </li>
+                </ul> 
+                <br>
+            </div>
+        </div>
+
+        <!-- Pied de -->
+        <div class="col-xs-12 well" id="pied">
+            <div class="col-xs-6">
+                <form action="">
+                    <div class="col-md-6">
+                        <p>Prenom</p>
+                        <input class="form-control" type="text" name="" id=""> 
                     </div>
-                </div>
-                <div class="col-xs-6">
-                    <p> </p>
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
-                        </ul>
+                    <div class="col-md-6">
+                        <p>Adresse mail</p>
+                        <input class="form-control" type="email" name="" id="">
                     </div>
-                </div>
-                <div class="col-xs-6">
-                    <p> </p>
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
-                        </ul>
+                    <div class="col-md-12">
+                        <p>Message</p>
+                        <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Entrez votre message"></textarea>
                     </div>
-                </div>
-                <div class="col-xs-6">
-                    <p> </p>
-                    <div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
-                        </ul>
+                    <div class="col-xs-12">
+                        <button class="btn btn-default" id="ptiboutton">Envoyer</button>
                     </div>
+                </form>
+            </div>
+            <div class="col-xs-3">
+                <p> </p>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
+                    </ul>
                 </div>
             </div>
-
-
+            <div class="col-xs-3">
+                <p> </p>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <p> </p>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <p> </p>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><img src="../image/logo-twitter-2014.png" alt=""> <label for="">Twitter</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6 liens">
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1</a>
+            </div>
+            <div class="col-xs-6 liens">
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1</a>
+            </div>
+            <div class="col-xs-6 liens">
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a>
+                <a href="">Lien numero 1<a> |</a></a> 
+                <a href="">Lien numero 1</a>
+            </div>
+            <div class="col-xs-6"></div>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-</body>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
 </html>

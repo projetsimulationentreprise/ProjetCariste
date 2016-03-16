@@ -9,35 +9,37 @@ html(lang='en')
     link(href='../css/index.css', rel='stylesheet')
   body
     // entête
-    .navbar-wrapper
+    .navbar.navbar-inverse.set-radius-zero
       .container
-        nav#navnav.navbar.navbar-inverse.navbar-static-top
-          .container
-            .navbar-header
-              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-              a.navbar-brand eRecrute
-            #navbar.navbar-collapse.collapse
-              ul.nav.navbar-nav
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+    section.menu-section
+      .container
+        .row
+          .col-md-12
+            .navbar-collapse.collapse
+              ul#menu-top.nav.navbar-nav.navbar-right
                 li
-                  a(href='index.html') Acceuil
+                  a(href='index.html') Accueil
                 li
-                  a(href='espace.html') Mon espace
+                  a.menu-top-active(href='espace.html') Mon espace
                 li
-                  a(href='espace.html') Espace Recruteur
+                  a(href='accueilRecruteur.html') Escpace Recruteur
                 li
-                  a(href='#formul') Nous contacer
+                  a(href='#formul') Nous contacter
                 li
-                  a#log(href='#signup', data-toggle='modal', data-target='.bs-modal-sm') Se connecter
+                  a(href='#signup', data-toggle='modal', data-target='.bs-modal-sm') Se connecter
     // Fin entête
-    img#navnav(src='../image/b1.jpg')
+    // Fin entête
+    img#navnav.img-responsive(src='../image/b1.jpg')
     // Login
     #myModal.modal.fade.bs-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
       .modal-dialog.modal-sm
         .modal-content
+          br
           .bs-example.bs-example-tabs
             ul#myTab.nav.nav-tabs
               li.active
@@ -65,8 +67,8 @@ html(lang='en')
                       label.control-label(for='rememberme')
                       .controls
                         label.checkbox.inline(for='rememberme-0')
-                          input#rememberme-0(type='checkbox', name='rememberme', value='Remember me')
-                          |                                                     Se rappeler
+                        input#rememberme-0(type='checkbox', name='rememberme', value='Remember me')
+                        | Se rappeler
                     // Button popup
                     .control-group
                       label.control-label(for='signin')
@@ -107,54 +109,66 @@ html(lang='en')
             center
               button.btn.btn-default(type='button', data-dismiss='modal') Fermer
     // Fin Login
-    // Présentation
-    div
-      .container-fluid
-        .col-md-offset-3.col-md-5
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.
-          br
-          br
-          br
-          br
-          br
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.
-      .col-md-offset-1.col-md-3
-        img(src='', alt='')
-    // ____<hr class="featurette-divider"></hr>___
-    // Fin Présentation
-    .container
-    // row fiche
-    #ok.container.col-md-12
+    br
+    br
+    br
+    .contener
       .row
-        .col-lg-offset-2.col-lg-1
-          h2 David
-          p Score test :
-          p
-            a.btn.btn-default(href='#', role='button') Sa fiche »
-        .col-lg-1.col-lg-offset-1
-          h2 Edwin
-          p Score test :
-          p
-            a.btn.btn-default(href='#', role='button') Sa fiche »
-        .col-lg-1.col-lg-offset-1
-          h2 Mathias
-          p Score test :
-          p
-            a.btn.btn-default(href='#', role='button') Sa fiche »
-        .col-lg-1.col-lg-offset-1
-          h2 Guillaume
-          p Score test :
-          p
-            a.btn.btn-default(href='#', role='button') Sa fiche »
-        br
-      br
-      br
-    // fin row fiche
+        .col-md-offset-1.col-md-10.box
+          .col-md-3.info
+            img.img-responsive.img-circle(src='http://www.online-image-editor.com//styles/2014/images/example_image.png', alt='')
+          .col-md-3.info
+            p Premier truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non maiores, consectetur, soluta deserunt provident voluptatum et aut velit repudiandae quod nisi. In qui earum quaerat saepe quibusdam porro nemo, delectus.
+          .col-md-3.info
+            p Second truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non maiores, consectetur, soluta deserunt provident voluptatum et aut velit repudiandae quod nisi. In qui earum quaerat saepe quibusdam porro nemo, delectus.
+          .col-md-3.info
+            p Troisieme truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi blanditiis dolores, quas, quaerat tempora delectus tempore recusandae mollitia id quae accusantium voluptatem itaque, inventore nam perferendis. Consectetur illo eius repellendus.
+          .col-md-12.info
+            button.CenterB.btn.popee Afficher plus de détails
+          .col-md-12.cachere.Center
+            p Informations supplémentaires
+            button.btn Offre
+          .col-md-12.info
+            a.btn Annuler
+            a.btn Valider
+    .contener
+      .row
+        .col-md-offset-1.col-md-10.box
+          .col-md-3.info
+            img.img-responsive.img-circle(src='http://www.online-image-editor.com//styles/2014/images/example_image.png', alt='')
+          .col-md-3.info
+            p Premier truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non maiores, consectetur, soluta deserunt provident voluptatum et aut velit repudiandae quod nisi. In qui earum quaerat saepe quibusdam porro nemo, delectus.
+          .col-md-3.info
+            p Second truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non maiores, consectetur, soluta deserunt provident voluptatum et aut velit repudiandae quod nisi. In qui earum quaerat saepe quibusdam porro nemo, delectus.
+          .col-md-3.info
+            p Troisieme truc
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi blanditiis dolores, quas, quaerat tempora delectus tempore recusandae mollitia id quae accusantium voluptatem itaque, inventore nam perferendis. Consectetur illo eius repellendus.
+          .col-md-12.info
+            button.CenterB.btn.popee Afficher plus de détails
+          .col-md-12.cachere.Center
+            p Informations supplémentaires
+            button.btn Offre
+          .col-md-12.info
+            a.btn Annuler
+            a.btn Valider
+    br
+    br
+    br
+    // Pied de
     // Pied de
     #pied.col-xs-12.well
-      #formul.col-xs-6
+      .col-xs-6
         form(action='')
           .col-md-6
             p Prenom
@@ -165,34 +179,70 @@ html(lang='en')
           .col-md-12
             p Message
             textarea.form-control(name='', id='', cols='30', rows='10', placeholder='Entrez votre message')
-          button.btn.btn-default Envoyer
-      .col-xs-6
+          .col-xs-12
+            button#ptiboutton.btn.btn-default Envoyer
+      .col-xs-3
         p  
         div
           ul.list-group
             li.list-group-item
               img(src='../image/logo-twitter-2014.png', alt='')
               label(for='') Twitter
-      .col-xs-6
+      .col-xs-3
         p  
         div
           ul.list-group
             li.list-group-item
               img(src='../image/logo-twitter-2014.png', alt='')
               label(for='') Twitter
-      .col-xs-6
+      .col-xs-3
         p  
         div
           ul.list-group
             li.list-group-item
               img(src='../image/logo-twitter-2014.png', alt='')
               label(for='') Twitter
-      .col-xs-6
+      .col-xs-3
         p  
         div
           ul.list-group
             li.list-group-item
               img(src='../image/logo-twitter-2014.png', alt='')
               label(for='') Twitter
+      .col-xs-6.liens
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='') Lien numero 1
+      .col-xs-6.liens
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='') Lien numero 1
+      .col-xs-6.liens
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='')
+          | Lien numero 1
+          a  |
+        a(href='') Lien numero 1
+      .col-xs-6
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
     script(src='../js/bootstrap.min.js')
+    script(src='../js/index.js')
