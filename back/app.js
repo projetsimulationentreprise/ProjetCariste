@@ -17,29 +17,26 @@ var Users   = require('./models/users');
 
 var app = express();
 
-require('./config/passport')(passport); // pass passport for configuration
+require('./config/passport')(passport);
 
-
-
-// set up our express application
-app.use(morgan('dev')); // log every request to the console
-app.use(cookieParser()); // read cookies (needed for auth)
+app.use(morgan('dev'));
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
 
 app.use(session({
-    secret: 'vidyapathaisalwaysrunning',
+    secret: 'team7simulationentreprise',
     resave: true,
     saveUninitialized: true
-} )); // session secret
+} ));
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.session());
+app.use(flash());
 
 // routes ======================================================================
-require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./app/routes.js')(app, passport);
 
 
 
