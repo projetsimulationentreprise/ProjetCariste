@@ -1,0 +1,181 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title
+        link(href='assets/css/bootstrap.min.css', rel='stylesheet')
+        link(href='assets/css/index.css', rel='stylesheet')
+    body
+        // entête
+        .navbar.navbar-inverse.set-radius-zero
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+        section.menu-section
+            .container
+                .row
+                    .col-md-12
+                        .navbar-collapse.collapse
+                            ul#menu-top.nav.navbar-nav.navbar-right
+                                li
+                                    a(href='/') Accueil
+                                li
+                                    a.menu-top-active(href='/espace') Mon espace
+                                li
+                                    a(href='/acceuilRecruteur') Escpace Recruteur
+                                li
+                                    a(href='#formul') Nous contacter
+                                li
+                                    a(href='#signup', data-toggle='modal', data-target='.bs-modal-sm') Se connecter
+        // Fin entête
+        // Fin entête
+        img#navnav.img-responsive(src='../image/b1.jpg')
+        // Login
+        #myModal.modal.fade.bs-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
+            .modal-dialog.modal-sm
+                .modal-content
+                    br
+                    .bs-example.bs-example-tabs
+                        ul#myTab.nav.nav-tabs
+                            li.active
+                                a(href='#signin', data-toggle='tab') Se connecter
+                            li
+                                a(href='#signup', data-toggle='tab') S'enregister
+                    .modal-body
+                        #myTabContent.tab-content
+                            #signin.tab-pane.fade.active.in
+                                form.form-horizontal
+                                    fieldset
+                                        // Se connecter
+                                        // PSEUDO
+                                        .control-group
+                                            label.control-label(for='userid') Nom:
+                                            .controls
+                                                input#userid.form-control(required='', name='userid', type='text', placeholder='Nom')
+                                        // MOT DE PASSE
+                                        .control-group
+                                            label.control-label(for='passwordinput') Mote de passe:
+                                            .controls
+                                                input#passwordinput.form-control(required='', name='passwordinput', type='password', placeholder='********')
+                                        // Case à cocher
+                                        .control-group
+                                            label.control-label(for='rememberme')
+                                            .controls
+                                                label.checkbox.inline(for='rememberme-0')
+                                                input#rememberme-0(type='checkbox', name='rememberme', value='Remember me')
+                                                | Se rappeler
+                                        // Button popup
+                                        .control-group
+                                            label.control-label(for='signin')
+                                            .controls
+                                                button#signin.btn.btn-success(name='signin') Se connecter
+                            #signup.tab-pane.fade
+                                form.form-horizontal
+                                    fieldset
+                                        // S'enregistrer
+                                        // EMAIL
+                                        .control-group
+                                            label.control-label(for='Email') Email:
+                                            .controls
+                                                input#Email.form-control(name='Email', type='text', placeholder='@mail.com', required='')
+                                        // PSEUDO
+                                        .control-group
+                                            label.control-label(for='userid') NOM:
+                                            .controls
+                                                input#userid.form-control(name='userid', type='text', placeholder='Nom', required='')
+                                        // Mot DE PASSE
+                                        .control-group
+                                            label.control-label(for='password') Mot de passe:
+                                            .controls
+                                                input#password.form-control(name='password', type='password', placeholder='********', required='')
+                                                em 1-8 Characters
+                                        // RE MOT DE PASSE
+                                        .control-group
+                                            label.control-label(for='reenterpassword') Re taper mot de passe:
+                                            .controls
+                                                input#reenterpassword.form-control(name='reenterpassword', type='password', placeholder='********', required='')
+                                        // Pour Captcha
+                                        // Button
+                                        .control-group
+                                            label.control-label(for='confirmsignup')
+                                            .controls
+                                                button#confirmsignup.btn.btn-success(name='confirmsignup') S'enregistrer
+                    .modal-footer
+                        center
+                            button.btn.btn-default(type='button', data-dismiss='modal') Fermer
+        // Fin Login
+        // Tuile page -
+        .container
+            .row
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    .box
+                        .info
+                            h4.text-center Fiche perso
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!
+                            a.btn(href='/fiche') Acceder
+                .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    .box
+                        .info
+                            h4.text-center Demandes
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!
+                            a.btn(href='/proposition') Acceder
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    .box
+                        .info
+                            h4.text-center Passer le test
+                            p
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!
+                            a.btn(href='/test') Acceder
+        br
+        // Pied de
+        // Pied de
+        #pied.col-xs-12.well
+            #formul.col-xs-6
+                form(action='')
+                    .col-md-6
+                        p Prenom
+                        input.form-control(type='text', name='', id='')
+                    .col-md-6
+                        p Adresse mail
+                        input.form-control(type='email', name='', id='')
+                    .col-md-12
+                        p Message
+                        textarea.form-control(name='', id='', cols='30', rows='10', placeholder='Entrez votre message')
+                    button.btn.btn-default Envoyer
+            .col-xs-6
+                p
+                div
+                    ul.list-group
+                        li.list-group-item
+                            img(src='../image/logo-twitter-2014.png', alt='')
+                            label(for='') Twitter
+            .col-xs-6
+                p
+                div
+                    ul.list-group
+                        li.list-group-item
+                            img(src='../image/logo-twitter-2014.png', alt='')
+                            label(for='') Twitter
+            .col-xs-6
+                p
+                div
+                    ul.list-group
+                        li.list-group-item
+                            img(src='../image/logo-twitter-2014.png', alt='')
+                            label(for='') Twitter
+            .col-xs-6
+                p
+                div
+                    ul.list-group
+                        li.list-group-item
+                            img(src='../image/logo-twitter-2014.png', alt='')
+                            label(for='') Twitter
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        script(src='javascripts/bootstrap.min.js')
