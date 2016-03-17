@@ -1,11 +1,27 @@
+//
+   Created by Janany on 17/03/2016.
+
+
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
-    form(action='/',method='post')
-        label(for='email') email
-          input(id='email',type='text',value='',placeholder='@',name='email')
-        label(for='password') password
-          input(id='password',type='password',value='',placeholder='',name='password')
-        input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
+block index
+
+        // Présentation
+        #jumb.jumbotron
+            .container
+                h1.display-3 Ici nous recrutons les caristes !
+                p.well
+                    | Bonjour et bienvenue sur le site
+                    strong
+                        | C-Recrute!
+                    | Ce site est une plateforme de mise en relation entre les entreprises et les
+                    | demandeurs d'emplois dans le métier de cariste, possédant déjà la formation
+                    | CACES mais n'ayant pas d'expérience en entreprise.
+                    | Vous pouvez vous connecter en tant que candidat pour effectuer des tests
+                    | ou rechercher des candidats en vous connectant sous un profil recruteur.
+                    | Notre système met en avant les compétences des candidats ne possédant pas encore
+                    | d'expérience dans le monde de l'entreprise grâce à une suite de tests.
+                    | La note résultant du test permet aux recruteurs de séléctionner les candidats
+                    | adéquats à leur entreprise et par la suite leur proposer un entretien.
+                    | Pour commencer créez un profil, qu'il soit recruteur ou candidat et
+                    | bonne chance!
