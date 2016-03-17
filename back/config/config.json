@@ -2,24 +2,24 @@
   "development": {
     "username": "root",
     "password": "root",
-    "port": "8889",
-    "database": "eRecrue_dev",
+    "port": "3301",
+    "database": "erecrue_dev",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "port": "8889",
-    "database": "eRecrue_test",
+    "port": "3301",
+    "database": "erecrue_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "root",
-    "port": "8889",
-    "database": "eRecrue_prod",
+    "port": "3301",
+    "database": "erecrue_prod",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
