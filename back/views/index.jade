@@ -1,215 +1,27 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        title
-        link(href='../stylesheets/bootstrap.min.css', rel='stylesheets')
-        link(href='../stylesheets/index.css', rel='stylesheets')
-    body
-        // entête
-        .navbar-wrapper
-            .container
-                nav#navnav.navbar.navbar-inverse.navbar-static-top
-                    .container
-                        .navbar-header
-                            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                                span.sr-only Toggle navigation
-                                span.icon-bar
-                                span.icon-bar
-                                span.icon-bar
-                            a.navbar-brand eRecrute
-                        #navbar.navbar-collapse.collapse
-                            ul.nav.navbar-nav
-                                li
-                                    a(href='index.html') Acceuil
-                                li
-                                    a(href='espace.html') Mon espace
-                                li
-                                    a(href='espace.html') Espace Recruteur
-                                li
-                                    a(href='#formul') Nous contacer
-                                li
-                                    a#log(href='#signup', data-toggle='modal', data-target='.bs-modal-sm') Se connecter
-        // Fin entête
-        img#navnav(src='../image/b1.jpg')
-        // Login
-        #myModal.modal.fade.bs-modal-sm(tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
-            .modal-dialog.modal-sm
-                .modal-content
-                    .bs-example.bs-example-tabs
-                        ul#myTab.nav.nav-tabs
-                            li.active
-                                a(href='#signin', data-toggle='tab') Se connecter
-                            li
-                                a(href='#signup', data-toggle='tab') S'enregister
-                    .modal-body
-                        #myTabContent.tab-content
-                            #signin.tab-pane.fade.active.in
-                                form.form-horizontal
-                                    fieldset
-                                        // Se connecter
-                                        // PSEUDO
-                                        .control-group
-                                            label.control-label(for='mail') Email:
-                                            .controls
-                                                input#userid.form-control(required='', name='userid', type='text', placeholder='Email@exemple.com')
-                                        // MOT DE PASSE
-                                        .control-group
-                                            label.control-label(for='passwordinput') Mote de passe:
-                                            .controls
-                                                input#passwordinput.form-control(required='', name='passwordinput', type='password', placeholder='********')
-                                        // Case à cocher
-                                        .control-group
-                                            label.control-label(for='rememberme')
-                                            .controls
-                                                label.checkbox.inline(for='rememberme-0')
-                                                    input#rememberme-0(type='checkbox', name='rememberme', value='Remember me')
-                                                    |                                                     Se rappeler
-                                        // Button popup
-                                        .control-group
-                                            label.control-label(for='signin')
-                                            .controls
-                                                button#signin.btn.btn-success(name='signin') Se connecter
-                            #signup.tab-pane.fade
-                                form.form-horizontal
-                                    fieldset
-                                        // S'enregistrer
-                                        // EMAIL
-                                        .control-group
-                                            label.control-label(for='mail') Email:
-                                            .controls
-                                                input#Email.form-control(name='mail', type='text', placeholder='@mail.com', required='mail')
-                                        // PSEUDO
-                                        .control-group
-                                            label.control-label(for='userid') NOM:
-                                            .controls
-                                                input#userid.form-control(name='userid', type='text', placeholder='Nom', required='nom')
-                                        // Mot DE PASSE
-                                        .control-group
-                                            label.control-label(for='password') Mot de passe:
-                                            .controls
-                                                input#password.form-control(name='password', type='password', placeholder='********', required='password')
-                                                em 1-8 Characters
-                                        // RE MOT DE PASSE
-                                        .control-group
-                                            label.control-label(for='reenterpassword') Re taper mot de passe:
-                                            .controls
-                                                input#reenterpassword.form-control(name='reenterpassword', type='password', placeholder='********', required='password')
-                                         // localisation
-                                        .control-group
-                                            label.control-label(for='localisation') Localisation:
-                                            .controls
-                                                input#userid.form-control(name='localisation', type='text', placeholder='Paris, Lyon..', required='localisation')
-                                        // skill
-                                        .control-group
-                                            label.control-label(for='skill') Expertise:
-                                            .controls
-                                                input#userid.form-control(name='skill', type='text', placeholder='Informatique, commerce...', required='skill')
-                                        // move
-                                        .control-group
-                                            label.control-label(for='move') Etes vous pret a vous deplacer? :
-                                            .controls
-                                                input#userid.form-control(name='move', type='text', placeholder='oui, non, pourquoi..', required='move')
+//
+   Created by Janany on 17/03/2016.
 
-                                        // Pour Captcha
-                                        // Button
-                                        .control-group
-                                            label.control-label(for='confirmsignup')
-                                            .controls
-                                                button#confirmsignup.btn.btn-success(name='confirmsignup') S'enregistrer
-                    .modal-footer
-                        center
-                            button.btn.btn-default(type='button', data-dismiss='modal') Fermer
-        // Fin Login
+
+extends layout
+
+block index
+
         // Présentation
-        div
-            .container-fluid
-                .col-md-offset-3.col-md-5
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.
-                    br
-                    br
-                    br
-                    br
-                    br
-                    p
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.
-            .col-md-offset-1.col-md-3
-                img(src='', alt='')
-        // ____<hr class="featurette-divider"></hr>___
-        // Fin Présentation
-        .container
-        // row fiche
-        #ok.container.col-md-12
-            .row
-                .col-lg-offset-2.col-lg-1
-                    h2 David
-                    p Score test :
-                    p
-                        a.btn.btn-default(href='#', role='button') Sa fiche »
-                .col-lg-1.col-lg-offset-1
-                    h2 Edwin
-                    p Score test :
-                    p
-                        a.btn.btn-default(href='#', role='button') Sa fiche »
-                .col-lg-1.col-lg-offset-1
-                    h2 Mathias
-                    p Score test :
-                    p
-                        a.btn.btn-default(href='#', role='button') Sa fiche »
-                .col-lg-1.col-lg-offset-1
-                    h2 Guillaume
-                    p Score test :
-                    p
-                        a.btn.btn-default(href='#', role='button') Sa fiche »
-                br
-            br
-            br
-        // fin row fiche
-        // Pied de
-        #pied.col-xs-12.well
-            #formul.col-xs-6
-                form(action='')
-                    .col-md-6
-                        p Prenom
-                        input.form-control(type='text', name='', id='')
-                    .col-md-6
-                        p Adresse mail
-                        input.form-control(type='email', name='', id='')
-                    .col-md-12
-                        p Message
-                        textarea.form-control(name='', id='', cols='30', rows='10', placeholder='Entrez votre message')
-                    button.btn.btn-default Envoyer
-            .col-xs-6
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='../image/logo-twitter-2014.png', alt='')
-                            label(for='') Twitter
-            .col-xs-6
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='../image/logo-twitter-2014.png', alt='')
-                            label(for='') Twitter
-            .col-xs-6
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='../image/logo-twitter-2014.png', alt='')
-                            label(for='') Twitter
-            .col-xs-6
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='../image/logo-twitter-2014.png', alt='')
-                            label(for='') Twitter
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-        script(src='../js/bootstrap.min.js')
-                   
+        #jumb.jumbotron
+            .container
+                h1.display-3 Ici nous recrutons les caristes !
+                p.well
+                    | Bienvenue sur le site :
+                    strong
+                        | C-Recrute!
+                    | Ce site est une plateforme de mise en relation entre les entreprises et les
+                    | demandeurs d'emplois dans le métier de cariste, possédant déjà la formation
+                    | CACES mais n'ayant pas d'expérience en entreprise.
+                    | Vous pouvez vous connecter en tant que candidat pour effectuer des tests
+                    | ou rechercher des candidats en vous connectant sous un profil recruteur.
+                    | Notre système met en avant les compétences des candidats ne possédant pas encore
+                    | d'expérience dans le monde de l'entreprise grâce à une suite de tests.
+                    | La note résultant du test permet aux recruteurs de séléctionner les candidats
+                    | adéquats à leur entreprise et par la suite leur proposer un entretien.
+                    | Pour commencer créez un profil, qu'il soit recruteur ou candidat et
+                    | bonne chance!
