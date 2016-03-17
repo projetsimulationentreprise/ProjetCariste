@@ -41,6 +41,10 @@ router.get('/ficheRecruteur', function(req, res, next) {
     res.render('ficheRecruteur');
 });
 
+router.get('/ficheCandidat', function(req, res, next) {
+  res.render('ficheCandidat');
+});
+
 router.get('/test', function(req, res, next) {
     res.render('test');
 });
