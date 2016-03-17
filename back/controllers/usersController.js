@@ -7,9 +7,19 @@ var models = require("../models");
 
 var test = {
     email: 'janany',
-    password: 'lol'
+    password: 'lol',
+    profil: 'candidat'
 };
 
 models.Users.create(test).then(function (user) {
     console.log(user);
 });
+
+var users = {
+    create : function(req,res){
+
+    }
+
+};
+
+module.exports = users;

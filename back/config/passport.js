@@ -30,6 +30,7 @@ module.exports = function(passport) {
         },
         function(req, email, password, done) {
             connection.query("SELECT * FROM Users WHERE email = ?",[email], function(err, rows) {
+                console.log(req.body.email);
                 if (err)
                     return done(err);
                 if (rows.length) {
