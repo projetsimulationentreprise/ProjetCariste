@@ -39,10 +39,14 @@ router.get('/ficheRecruteur', function(req, res, next) {
   res.render('ficheRecruteur');
 });
 
-/* GET sign up page. */
-//router.get('/signup', function(req, res, next) {
-//  res.render('signup');
+//router.get('/test', function(req, res, next) {
+//    res.render('test');
 //});
+
+/* GET sign up page. */
+router.get('/signup', function(req, res, next) {
+  res.render('signup');
+});
 //
 ///* GET home page. */
 //router.get('/', function(req, res, next) {

@@ -2,126 +2,26 @@
    Created by Janany on 17/03/2016.
 
 
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        meta(name='viewport', content='width=device-width, initial-scale=1')
-        title
-        link(href='css/bootstrap.min.css', rel='stylesheet')
-        link(href='css/index.css', rel='stylesheet')
-    body
-        // entête
-        .navbar.navbar-inverse.set-radius-zero
-            .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-        section.menu-section
-            .container
-                .row
-                    .col-md-12
-                        .navbar-collapse.collapse
-                            ul#menu-top.nav.navbar-nav.navbar-right
-                                li
-                                    a.menu-top-active(href='/') Accueil
-                                li
-                                    a(href='#formul') Nous contacter
-                                li
-                                    a(href='/signup') S'inscrire
-                                li
-                                    a(href='/login') Se connecter
+extends layout
 
-        // Fin entête
-        // Fin entête
-        img#navnav.img-responsive(src='image/accueil.png')
+block index
 
         // Présentation
         #jumb.jumbotron
             .container
                 h1.display-3 Ici nous recrutons les caristes !
                 p.well
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi laboriosam aut voluptatum aperiam! Quae repudiandae hic esse, facilis qui molestias at earum, distinctio illo magni nemo tempore quia maiores
-        // Fin Présentation
-        //div
-        //    .col-md-offset-1.col-md-3
-        //        img(src='', alt='')
-        // Pied de page
-        #pied.col-xs-12.well
-            #formul
-                .col-xs-6
-                    form(action='')
-                        .col-md-6
-                            p Prénom
-                            input.form-control(type='text', name='', id='')
-                        .col-md-6
-                            p Adresse mail
-                            input.form-control(type='email', name='', id='')
-                        .col-md-12
-                            p Message
-                            textarea.form-control(name='', id='', cols='30', rows='10', placeholder='Entrez votre message')
-                        .col-xs-12
-                            button#ptiboutton.btn.btn-default Envoyer
-            br
-            br
-            br
-            br
-            .col-xs-3
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='image/logo-twitter.png', alt='')
-                            label(for='')
-                            strong
-                                |   Twitter
-            .col-xs-3
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='image/logo-facebook.png', alt='')
-                            label(for='')
-                            strong
-                                |   Facebook
-            .col-xs-3
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='image/logo-linkedin.png', alt='')
-                            label(for='')
-                            strong
-                                |   Linkedin
-
-            .col-xs-3
-                p
-                div
-                    ul.list-group
-                        li.list-group-item
-                            img(src='image/logo-google.png', alt='')
-                            label(for='')
-                            strong
-                                |   Google+
-
-            .col-xs-6.liens
-                br
-                br
-                br
-                br
-                br
-                br
-                a(href='')
-                    |  A propos
-                    a  |
-                a(href='')
-                    |  Mentions légales
-                    a  |
-                a(href='')
-                    |  Conditions générales
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-        script(src='js/bootstrap.min.js')
-        script(src='js/index.js')
+                    | Bonjour et bienvenue sur le site
+                    strong
+                        | C-Recrute!
+                    | Ce site est une plateforme de mise en relation entre les entreprises et les
+                    | demandeurs d'emplois dans le métier de cariste, possédant déjà la formation
+                    | CACES mais n'ayant pas d'expérience en entreprise.
+                    | Vous pouvez vous connecter en tant que candidat pour effectuer des tests
+                    | ou rechercher des candidats en vous connectant sous un profil recruteur.
+                    | Notre système met en avant les compétences des candidats ne possédant pas encore
+                    | d'expérience dans le monde de l'entreprise grâce à une suite de tests.
+                    | La note résultant du test permet aux recruteurs de séléctionner les candidats
+                    | adéquats à leur entreprise et par la suite leur proposer un entretien.
+                    | Pour commencer créez un profil, qu'il soit recruteur ou candidat et
+                    | bonne chance!
