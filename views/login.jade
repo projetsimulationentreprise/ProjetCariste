@@ -1,0 +1,33 @@
+//
+   Created by Janany on 16/03/2016.
+extends layout
+
+block login
+    .container
+        .col-sm-6.col-sm-offset-3
+            h1
+                span.fa.fa-sign-in
+                |  Se connecter
+            // show any messages that come back with authentication
+            if (message!='')
+                .alert.alert-danger #{message}
+            // LOGIN FORM
+            form(action='/login', method='post')
+                .form-group
+                    label Email
+                    input.form-control(type='email', name='email',required)
+                .form-group
+                    label Mot de passe
+                    input.form-control(type='password', name='password',required)
+                .form-group
+                    label Se souvenir de moi
+                    input.form-control(type='checkbox', name='remember', value='yes')
+                button.btn.btn-warning.btn-lg(type='submit') Se connecter
+            hr
+            p
+                | Devenir membre?
+                a(href='/signup') S'inscrire
+            p
+                | Retour à la page d'
+                a(href='/') accueil
+                | .

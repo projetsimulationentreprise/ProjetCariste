@@ -1,7 +1,142 @@
 doctype html
-html
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/index.css', rel='stylesheet')
+    //link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    style.
+        html {
+            /*padding-top: 80px;*/
+
+        }
+    body
+        // entête
+        .navbar.navbar-inverse.set-radius-zero
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            section.menu-section
+                .container
+                    .row
+                    .col-md-12
+                        .navbar-collapse.collapse
+                              ul#menu-top.nav.navbar-nav.navbar-right
+                                li
+                                  a.menu-top-active(href='/') Accueil
+                                li
+                                  a(href='#formul') Nous contacter
+                                if (user)
+                                    //if(user.profil=='candidat')
+                                    li
+                                        a(href='/test') Test
+
+                                    li
+                                        a(href='/candidat') Candidats
+                                    li
+                                        a(href='/profile') Mon compte
+                                    li
+                                        a(href='/logout') Déconnexion
+                                else
+                                  li
+                                    a(href='/signup') S'inscrire
+                                  li
+                                    a(href='/login') Se connecter
+
+        // Fin entête
+        img#navnav.img-responsive(src='image/accueil.png')
+
+
+        block index
+        block espace
+        block profile
+        block test
+        block signup
+        block login
+        block candidat
+
+
+
+    // Pied de page
+    #pied.col-xs-12.well
+                #formul
+                    .col-xs-6
+                        form(action='')
+                            .col-md-6
+                                p Prénom
+                                input.form-control(type='text', name='', id='')
+                            .col-md-6
+                                p Email
+                                input.form-control(type='email', name='', id='')
+                            .col-md-12
+                                p Message
+                                textarea.form-control(name='', id='', cols='30', rows='10', placeholder='Entrez votre message')
+                            .col-xs-12
+                                button#ptiboutton.btn.btn-default Envoyer
+                br
+                br
+                br
+                br
+                .col-xs-3
+                    p
+                    div
+                        ul.list-group
+                            li.list-group-item
+                                img(src='image/logo-twitter.png', alt='')
+                                label(for='')
+                                strong
+                                    |   Twitter
+                .col-xs-3
+                    p
+                    div
+                        ul.list-group
+                            li.list-group-item
+                                img(src='image/logo-facebook.png', alt='')
+                                label(for='')
+                                strong
+                                    |   Facebook
+                .col-xs-3
+                    p
+                    div
+                        ul.list-group
+                            li.list-group-item
+                                img(src='image/logo-linkedin.png', alt='')
+                                label(for='')
+                                strong
+                                    |   Linkedin
+
+                .col-xs-3
+                    p
+                    div
+                        ul.list-group
+                            li.list-group-item
+                                img(src='image/logo-google.png', alt='')
+                                label(for='')
+                                strong
+                                    |   Google+
+
+                .col-xs-6.liens
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    a(href='')
+                        |  A propos
+                        a  |
+                    a(href='')
+                        |  Mentions légales
+                        a  |
+                    a(href='http://www.jobtransport.com/espace-recruteurs/conditions-dutilisation.aspx')
+                        |  Conditions générales
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+            script(src='js/bootstrap.min.js')
+            script(src='js/index.js')

@@ -5,23 +5,77 @@
 extends layout
 
 block index
-
-        // Présentation
-        #jumb.jumbotron
-            .container
-                h1.display-3 Ici nous recrutons les caristes !
-                p.well
-                    | Bienvenue sur le site :
-                    strong
-                        | C-Recrute!
-                    | Ce site est une plateforme de mise en relation entre les entreprises et les
-                    | demandeurs d'emplois dans le métier de cariste, possédant déjà la formation
-                    | CACES mais n'ayant pas d'expérience en entreprise.
-                    | Vous pouvez vous connecter en tant que candidat pour effectuer des tests
-                    | ou rechercher des candidats en vous connectant sous un profil recruteur.
-                    | Notre système met en avant les compétences des candidats ne possédant pas encore
-                    | d'expérience dans le monde de l'entreprise grâce à une suite de tests.
-                    | La note résultant du test permet aux recruteurs de séléctionner les candidats
-                    | adéquats à leur entreprise et par la suite leur proposer un entretien.
-                    | Pour commencer créez un profil, qu'il soit recruteur ou candidat et
-                    | bonne chance!
+    #jumb.jumbotron
+        .container
+            h1#C-r.display-3 C-Recrute!
+            p#Ecri.well
+                | Ce site est une plateforme de mise en relation entre les entreprises et les
+                | demandeurs d'emplois dans le métier de cariste, possédant déjà la formation
+                | CACES mais n'ayant pas d'expérience en entreprise.
+                br
+                |                     Vous pouvez vous connecter en tant que candidat pour effectuer des tests
+                |                     ou rechercher des candidats en vous connectant sous un profil recruteur.
+                br
+                br
+                |                     Notre système met en avant les compétences des candidats ne possédant pas encore
+                |                     d'expérience dans le monde de l'entreprise grâce à une suite de tests.
+                |                     La note résultant du test permet aux recruteurs de séléctionner les candidats
+                |                     adéquats à leur entreprise et par la suite leur proposer un entretien.
+                br
+                br
+                |                     Pour commencer créez un profil, qu'il soit recruteur ou candidat et
+                |                     bonne chance!
+                br
+                br
+                center
+                    a(href='https://www.powtoon.com/online-presentation/cDSx9lip0nH/?mode=movie#/') Teaser
+    section#principal-content
+        .container.bootstrap.snippet
+            .row
+                .col-md-12
+                    article
+                        #design.row
+                            .col-md-4.col-md-offset-1
+                                .home-design-info
+                                    figure
+                                        img#pastille.img-circle(src='image/car1.jpg')
+                            // 4
+                            .col-md-6
+                                .deets
+                                    h3.text-primary
+                                        span.glyphicon.glyphicon-arrow-right
+                                        |  Avez-vous votre permis cariste ?
+                                    p#Ecri Venez vous inscrire et trouver très vite un emploi.
+                        // /row
+                        hr
+                        #develop.row
+                            .col-md-4.col-md-push-7
+                                .home-dev-info
+                                    figure
+                                        img#pastille.img-circle(src='image/car2.jpg')
+                            // col
+                            .col-md-6.col-md-pull-3
+                                .deets
+                                    h3.text-primary
+                                        | Passez le test tout en vous amusant !
+                                        span.glyphicon.glyphicon-arrow-left
+                                    p#Ecri
+                                        | Un questionnaire spécial vous attend.
+                            // col
+                        // /row
+                        hr
+                        #design.row
+                            .col-md-4.col-md-offset-1
+                                .home-design-info
+                                    figure
+                                        img#pastille.img-circle(src='image/car3.jpg')
+                            // 4
+                            .col-md-6
+                                .deets
+                                    h3.text-primary
+                                        span.glyphicon.glyphicon-arrow-right
+                                        |  Vous êtes recruteur ?
+                                    p#Ecri Inscrivez-vous et trouver vos employés !
+                        // /row
+                        br
+    // fin row fiche

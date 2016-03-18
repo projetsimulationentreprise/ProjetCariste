@@ -1,0 +1,48 @@
+extends layout
+
+block signup
+    .container
+        .col-sm-6.col-sm-offset-3
+            h1
+                span.fa.fa-sign-in
+                |  S'inscrire
+            // show any messages that come back with authentication
+            if (message!='')
+                .alert.alert-danger #{message}
+            // LOGIN FORM
+            form(action='/signup', method='post')
+                .form-group
+                    label Nom
+                    input.form-control(type='text', name='nom',required)
+                .form-group
+                    label Prénom
+                    input.form-control(type='text', name='prenom',required)
+                .form-group
+                    label Email
+                    input.form-control(type='email', name='email',required)
+                .form-group
+                    label Mot de passe
+                    input.form-control(type='password', name='password',required)
+                .form-group
+                    label Confirmez votre mot de passe
+                    input.form-control(type='password', name='passwordConf',required)
+                .form-group
+                    center
+                        label Vous êtes :
+                    br
+
+                    input(type='radio', name='profil',value='candidat')
+                    label   Candidat
+                    br
+                    input(type='radio', name='profil',value='recruteur')
+                    label   Recruteur
+                button.btn.btn-warning.btn-lg(type='submit')  S'inscrire
+            hr
+            p
+                | Déja inscrit ?
+                a(href='/login') Se connecter
+            p
+                | Retour à la page d'
+                a(href='/') accueil
+                | .
+

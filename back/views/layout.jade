@@ -10,34 +10,30 @@ html(lang='en')
   body
     // entête
     .navbar.navbar-inverse.set-radius-zero
-      .container
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
+          .container-fluid
+              img.logo(src='image/Logo.png')
     section.menu-section
-      .container
-        .row
-          .col-md-12
-            .navbar-collapse.collapse
-              ul#menu-top.nav.navbar-nav.navbar-right
-                li
-                  a.menu-top-active(href='/') Accueil
-                li
-                  a(href='#formul') Nous contacter
-                if (user)
-                  li
-                    a(href='/test') Test
-                  li
-                    a(href='/profile') Mon compte
-                  li
-                    a(href='/logout') Déconnexion
-                else
-                  li
-                    a(href='/signup') S'inscrire
-                  li
-                    a(href='/login') Se connecter
+          .container
+              .row
+                  .col-md-12
+                      .navbar-collapse.collapse
+                          ul#menu-top.nav.navbar-nav.navbar-right
+                            li
+                              a.menu-top-active(href='/') Accueil
+                            li
+                              a(href='#formul') Nous contacter
+                            if (user)
+                              li
+                                a(href='/test') Test
+                              li
+                                a(href='/profile') Mon compte
+                              li
+                                a(href='/logout') Déconnexion
+                            else
+                              li
+                                a(href='/signup') S'inscrire
+                              li
+                                a(href='/login') Se connecter
 
     // Fin entête
     img#navnav.img-responsive(src='image/accueil.png')
@@ -47,6 +43,8 @@ html(lang='en')
     block espace
     block profile
     block test
+    block signup
+    block login
 
 
 

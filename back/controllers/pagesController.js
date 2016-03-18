@@ -5,6 +5,20 @@
 var express = require('express');
 var router = express.Router();
 
+//app.get('/' , isLoggedIn, function(req, res) {
+//    //res.render('index', {
+//    //    user : req.user
+//    //});
+//    res.render('index');
+//    console.log(req.user);
+//});
+//
+//router.post('/', isLoggedIn, function(req, res) {
+//    res.render('index', {
+//        user : req.user
+//    });
+//});
+
 router.get('/', function(req, res, next) {
     res.render('index');
 });
@@ -41,8 +55,21 @@ router.get('/ficheRecruteur', function(req, res, next) {
     res.render('ficheRecruteur');
 });
 
-router.get('/test', function(req, res, next) {
-    res.render('test');
+
+router.get('/test', function(req, res) {
+    res.render('test', {
+        user : req.body.user
+    });
 });
 
 module.exports = router;
+
+function isLoggedIn(req, res, next) {
+
+    // if user connecté
+    if (req.isAuthenticated())
+        return next();
+
+    // sinon page d'accueil
+    res.redirect('/');
+}
